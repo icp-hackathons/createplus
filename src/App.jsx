@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+
+import WalletCard from './WalletCard';
 import WalletCardEthers from './WalletCardEthers';
 function App() {
   const [count, setCount] = useState(0)
@@ -11,11 +13,11 @@ function App() {
         <a href="https://reactjs.org" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
-        <h1>Create +</h1>
-        <WalletCardEthers />
+
 
       </div>
-
+      <h1>Create +</h1>
+      <WalletCard />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
