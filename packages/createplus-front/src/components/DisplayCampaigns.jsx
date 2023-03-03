@@ -10,9 +10,15 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
   const handleNavigate = (campaign) => {
     navigate(`/campaign-details/${campaign.title}`, { state: campaign })
   }
-  
+
   return (
     <div>
+
+      <div className="my-20 flex flex-col justify-center items-center p-[16px] sm:min-w-[380px]   rounded-[10px]  ">
+        <h1 className="font-epilogue font-bold sm:text-[35px] text-[48px] leading-[38px] text-white">Create +</h1>
+
+        <h3 className="font-epilogue font-bold sm:text-[20px] text-[48px] leading-[38px] text-white">text text text</h3>
+     </div>
       <h1 className="font-epilogue font-semibold text-[18px] text-white text-left">{title} ({campaigns.length})</h1>
 
       <div className="flex flex-wrap mt-[20px] gap-[26px]">
@@ -26,7 +32,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
           </p>
         )}
 
-        {!isLoading && campaigns.length > 0 && campaigns.map((campaign) => <FundCard 
+        {!isLoading && campaigns.length > 0 && campaigns.map((campaign) => <FundCard
           key={campaign.id}
           {...campaign}
           handleClick={() => handleNavigate(campaign)}
