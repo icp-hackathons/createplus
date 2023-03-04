@@ -17,7 +17,7 @@ const DisplayCampaigns = ({ title, isLoading, campaigns }) => {
       <div className="my-20 flex flex-col justify-center items-center p-[16px] sm:min-w-[380px]   rounded-[10px]  ">
         <h1 className="font-epilogue font-bold sm:text-[35px] text-[48px] leading-[38px] text-white">Create +</h1>
 
-        <h3 className="font-epilogue font-bold sm:text-[20px] text-[48px] leading-[38px] text-white">text text text</h3>
+        <h3 className="font-epilogue font-bold sm:text-[20px] text-[48px] leading-[38px] text-white">Retaking Entertainment</h3>
      </div>
       <h1 className="font-epilogue font-semibold text-[18px] text-white text-left">{title} ({campaigns.length})</h1>
 
