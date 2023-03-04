@@ -11,10 +11,12 @@
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
     "@lens-protocol/widgets-react": "^0.0.4",
+    "@magic-sdk/react-native-expo": "^14.5.0",
     "@thirdweb-dev/react": "^3.9.0",
     "@thirdweb-dev/sdk": "^3.9.0",
     "@usedapp/core": "^1.2.7",
     "ethers": "^5.7.2",
+    "magic-sdk": "^10.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2"
