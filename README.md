@@ -6,4 +6,4 @@ A decentralized and elevated content creation DAO which includes crowdfunding an
 Website:
 hvyxq-7aaaa-aaaad-qfa6q-cai.ic.fleek.co
 
-Built on Fleek and deployed via Github
+Deployed using Internet Computer
