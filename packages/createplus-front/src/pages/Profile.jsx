@@ -17,6 +17,7 @@ import { UserContext } from '../lib/UserContext';
 import { magic } from '../lib/magic';
 import Router from 'next/router';
 import { TextField, CallToAction } from '@magiclabs/ui';
+import CypherButton from '../components/CypherButton';
 
 const Profile = () => {
   const [email, setEmail] = useState('');
@@ -49,6 +50,15 @@ const Profile = () => {
     }
   }, [email]);
 
+  const loginCypher = useCallback(async () => {
+    // Mainnet
+  window.Cypher({
+    address: '0x3d063C72b5A5b5457cb02076d134c806eca63Cff',
+    targetChainIdHex: '0xa',
+    requiredTokenContractAddress: "0x7f5c764cbc14f9669b88837ca1490cca17c31607",
+    requiredTokenBalance: 11,
+  });
+  });
   const handleInputOnChange = useCallback((event) => {
     setEmail(event.target.value);
   }, []);
@@ -71,7 +81,7 @@ const Profile = () => {
       <form onSubmit="" className="w-full mt-[35px] flex flex-col gap-[10px]">
         <div className="flex flex-wrap gap-[40px]">
           <FormField
-            labelName="Your Name *"
+            labelName="Your Name"
             placeholder="John Doe"
             inputType="text"
             value=""
@@ -79,7 +89,7 @@ const Profile = () => {
         </div>
 
         <FormField
-            labelName="Story *"
+            labelName="Story"
             placeholder="Write your story"
           inputType="text"
           value=""
@@ -149,13 +159,31 @@ const Profile = () => {
           </div>
 
         </div>
-
-        <div className=" flex justify-center items-center mt-[10px]">
-          <ShareToLens className=" justify-center gap-4 text-center "
-            content="I love Create+"
-          />
-        </div>
+        
       </form>
+      <div className=''>
+
+        <div className="col-span-1 flex justify-center items-center mt-[20px] flex-row px-1">
+          <div className="login-container">
+            <h1 className='text-white'>Get Started with Cypher</h1>
+            
+            <CallToAction
+              color="primary"
+              size="sm"
+              onClick={loginCypher} 
+              className={`font-epilogue font-semibold text-[16px] leading-[26px] text-white min-h-[52px] px-4 rounded-[10px]`}
+            >
+              Go
+            </CallToAction>
+          </div>
+        </div>
+
+        </div>
+      <div className=" flex justify-center items-center mt-[10px]">
+        <ShareToLens className=" justify-center gap-4 text-center "
+          content="I love Create+"
+        />
+      </div>
       <div>
         <div className=" mt-[40px] w-full flex-auto justify-start items-center p-4 bg-[#3a3a43]  h-[120px] rounded-[10px]">
 
